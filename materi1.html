@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materi 1: Berpikir Komputasional - Akademi Koding</title>
+
+    <!-- Font Poppins & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="materi1.css" />
+  </head>
+  <body class="materi-page">
+    <!-- Navigasi Atas -->
+    <nav class="top-nav">
+      <a href="menu.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Menu</a>
+      <div class="user-badge"><i class="fa-solid fa-user-astronaut"></i> <span id="studentName">Siswa</span></div>
+    </nav>
+
+    <main class="content-container">
+      <!-- Header Materi -->
+      <header class="materi-header">
+        <span class="tag-modul">MODUL 1.1 • FASE C SD</span>
+        <h1>Berpikir Komputasional</h1>
+        <p class="desc">Keterampilan <em>problem solving</em> berjenjang melalui pemodelan dan simulasi untuk menghasilkan solusi efektif, efisien, dan optimal yang dapat dijalankan manusia atau mesin.</p>
+      </header>
+
+      <!-- Bagian 1: 4 Pilar Berpikir Komputasional -->
+      <section class="section-block">
+        <h2><i class="fa-solid fa-cubes-stacked icon-title"></i> 1. Empat Pilar Berpikir Komputasional</h2>
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <h3>Dekomposisi</h3>
+            <p>Memecah masalah kompleks menjadi bagian-bagian yang lebih kecil dan mudah dikelola (Contoh: Menyusun checklist pesta ulang tahun).</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3>Pengenalan Pola</h3>
+            <p>Menemukan kesamaan atau keteraturan pola dalam data/masalah agar solusinya dapat digunakan kembali secara efisien.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-filter"></i></div>
+            <h3>Abstraksi</h3>
+            <p>Menyaring dan memilah informasi penting serta mengabaikan detail yang tidak relevan agar kode/solusi tetap ringkas.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-list-ol"></i></div>
+            <h3>Algoritma</h3>
+            <p>Menyusun langkah-langkah atau prosedur logis, terstruktur, dan bertahap untuk menyelesaikan suatu tugas secara presisi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bagian 2: Konsep Masukan - Proses - Luaran (IPO) & Variabel -->
+      <section class="section-block info-two-col">
+        <div class="info-card">
+          <h2><i class="fa-solid fa-gears icon-title"></i> 2. Konsep IPO (Input-Proses-Output)</h2>
+          <p class="section-subtext">Dasar bagaimana komputer bekerja dan memproses instruksi sistematis:</p>
+          <ul class="detail-list">
+            <li><strong>Input (Masukan):</strong> Bahan atau data yang dimasukkan (Contoh: Buah kiwi, semangka, apel / tombol ditekan).</li>
+            <li><strong>Proses (Pengolahan):</strong> Sistem mengolah input berdasarkan aturan (Contoh: Blender memotong & mencampur buah).</li>
+            <li><strong>Output (Luaran):</strong> Hasil akhir setelah pemrosesan (Contoh: Jus buah segar siap diminum).</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h2><i class="fa-solid fa-box-archive icon-title"></i> 3. Variabel dalam Koding</h2>
+          <p class="section-subtext">Wadah penyimpanan data dinamis yang nilainya dapat diamati dan berubah sewaktu-waktu:</p>
+          <ul class="detail-list">
+            <li><strong>Variabel "Skor":</strong> Bertambah 10 poin setiap kali pemain menjawab pertanyaan dengan benar.</li>
+            <li><strong>Variabel "Nyawa":</strong> Berkurang 1 poin setiap kali karakter terkena rintangan.</li>
+            <li><strong>Variabel "Waktu":</strong> Menghitung mundur batas pengerjaan misi gim.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Bagian 3: 3 Alur Logika Pemrograman -->
+      <section class="section-block">
+        <h2><i class="fa-solid fa-diagram-project icon-title"></i> 4. Alur Logika Pemrograman</h2>
+        <div class="logic-grid">
+          <div class="logic-card">
+            <span class="logic-tag">Sekuensial</span>
+            <h4>Urutan Langkah Terstruktur</h4>
+            <p>Instruksi dieksekusi satu per satu sesuai urutan dari awal sampai akhir (Contoh: Resep membuat teh manis atau roti lapis).</p>
+          </div>
+          <div class="logic-card">
+            <span class="logic-tag">Percabangan (If-Else)</span>
+            <h4>Pemilihan Keputusan</h4>
+            <p>Program memilih jalur berbeda berdasarkan kondisi: <em>"Jika hujan, maka gunakan payung; jika tidak, maka tidak memakai payung"</em>.</p>
+          </div>
+          <div class="logic-card">
+            <span class="logic-tag">Perulangan (Loop)</span>
+            <h4>Pengulangan Efisien</h4>
+            <p>Mengulang instruksi yang sama sampai batas terpenuhi: <em>"Ulangi melangkah maju sampai karakter mencapai garis finish"</em>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bagian 4: Dua Laboratorium Simulasi Interaktif -->
+      <section class="section-block sim-dual-wrapper">
+        <!-- Lab 1: Jam Modulo 10 -->
+        <div class="sim-card">
+          <h2><i class="fa-solid fa-clock-rotate-left icon-title"></i> Lab 1: Jam Modulo 10</h2>
+          <p class="sim-instruction">Modulo menghasilkan sisa pembagian. Pada Modulo 10, hitungan akan kembali ke 0 setiap melewati angka 9.</p>
+          <div class="clock-display" id="clockNumber">0</div>
+          <div class="sim-controls">
+            <button class="btn-step" id="btnClockStep"><i class="fa-solid fa-plus"></i> +1 Langkah Maju</button>
+            <button class="btn-reset" id="btnClockReset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+          </div>
+          <p class="sim-log" id="clockLog">Posisi jarum: 0</p>
+        </div>
+
+        <!-- Lab 2: Simulasi IPO Blender Buah -->
+        <div class="sim-card">
+          <h2><i class="fa-solid fa-blender icon-title"></i> Lab 2: Simulasi IPO Buah</h2>
+          <p class="sim-instruction">Pilih bahan input, jalankan proses pengolahan, dan perhatikan output yang dihasilkan!</p>
+          <div class="fruit-input-group">
+            <label><input type="radio" name="fruitChoice" value="Apel & Kiwi" checked /> 🍎 Apel + 🥝 Kiwi</label>
+            <label><input type="radio" name="fruitChoice" value="Semangka & Jeruk" /> 🍉 Semangka + 🍊 Jeruk</label>
+          </div>
+          <div class="sim-controls">
+            <button class="btn-step" id="btnBlend"><i class="fa-solid fa-play"></i> Proses (Blender)</button>
+          </div>
+          <div class="blend-status" id="blendStatus">Status: Menunggu Input Bahan...</div>
+        </div>
+      </section>
+
+      <!-- Bagian 5: Kuis Evaluasi Terstandar (10 Soal - LK 2.3) -->
+      <section class="section-block quiz-block">
+        <h2><i class="fa-solid fa-clipboard-question icon-title"></i> Evaluasi Modul: Kuis Berpikir Komputasional (LK 2.3)</h2>
+        <p class="quiz-info">Bobot tiap soal: 10 poin • Skor Maksimal: 100 Poin. Nilai akan otomatis tersimpan di rapor sistem.</p>
+
+        <form id="quizForm">
+          <div class="question-group">
+            <p class="q-text">1. Dari definisi berikut, manakah yang paling tepat menggambarkan berpikir komputasional?</p>
+            <label><input type="radio" name="q1" value="A" required /> A. Kemampuan menyelesaikan masalah dengan cepat</label>
+            <label><input type="radio" name="q1" value="B" /> B. Kemampuan membuat program komputer secara langsung</label>
+            <label><input type="radio" name="q1" value="C" /> C. Kemampuan menyelesaikan masalah dengan teknik berpikir seperti komputer</label>
+            <label><input type="radio" name="q1" value="D" /> D. Kemampuan menghafal rumus dan algoritma</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">2. Berpikir komputasional dalam artian lain juga berarti...</p>
+            <label><input type="radio" name="q2" value="A" required /> A. Menghafal urutan kode pemrograman</label>
+            <label><input type="radio" name="q2" value="B" /> B. Pemecahan masalah melalui pemodelan dan simulasi</label>
+            <label><input type="radio" name="q2" value="C" /> C. Mengerjakan soal matematika secara manual</label>
+            <label><input type="radio" name="q2" value="D" /> D. Mengandalkan komputer dalam setiap penyelesaian masalah</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">3. Apa saja 4C yang ada di dalam keterampilan abad 21?</p>
+            <label><input type="radio" name="q3" value="A" required /> A. Communication, Coding, Creativity, Confidence</label>
+            <label><input type="radio" name="q3" value="B" /> B. Collaboration, Communication, Calculation, Coding</label>
+            <label><input type="radio" name="q3" value="C" /> C. Critical Thinking, Creativity, Communication, Collaboration</label>
+            <label><input type="radio" name="q3" value="D" /> D. Critical Thinking, Creativity, Coding, Confidence</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">4. Dari pernyataan di bawah ini, manakah yang paling tepat?</p>
+            <label><input type="radio" name="q4" value="A" required /> A. Berpikir komputasional hanya digunakan saat menggunakan komputer</label>
+            <label><input type="radio" name="q4" value="B" /> B. Berpikir komputasional dapat digunakan dalam kehidupan sehari-hari untuk menyelesaikan masalah</label>
+            <label><input type="radio" name="q4" value="C" /> C. Semua orang harus belajar koding agar bisa berpikir komputasional</label>
+            <label><input type="radio" name="q4" value="D" /> D. Berpikir komputasional tidak penting untuk anak sekolah dasar</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">5. Apa saja 4 prinsip dasar berpikir komputasional?</p>
+            <label><input type="radio" name="q5" value="A" required /> A. Decomposition, Pattern Recognition, Abstraction, Algorithmic Thinking</label>
+            <label><input type="radio" name="q5" value="B" /> B. Algoritma, Logika, Analisis, Simulasi</label>
+            <label><input type="radio" name="q5" value="C" /> C. Input, Proses, Output, Visualisasi</label>
+            <label><input type="radio" name="q5" value="D" /> D. Urutan, Cabang, Perulangan, Debugging</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">6. Pernyataan di bawah ini merupakan bentuk berpikir komputasional dalam kehidupan sehari-hari, KECUALI...</p>
+            <label><input type="radio" name="q6" value="A" required /> A. Mengatur jadwal belajar menggunakan aplikasi</label>
+            <label><input type="radio" name="q6" value="B" /> B. Membuat langkah-langkah memasak mie instan</label>
+            <label><input type="radio" name="q6" value="C" /> C. Menghafal soal tanpa memahami konsep</label>
+            <label><input type="radio" name="q6" value="D" /> D. Menentukan rute tercepat menggunakan Google Maps</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">7. Cara kerja komputer melibatkan tiga tahapan utama. Manakah urutan yang benar?</p>
+            <label><input type="radio" name="q7" value="A" required /> A. Proses - Input - Output</label>
+            <label><input type="radio" name="q7" value="B" /> B. Output - Input - Proses</label>
+            <label><input type="radio" name="q7" value="C" /> C. Input - Proses - Output</label>
+            <label><input type="radio" name="q7" value="D" /> D. Input - Output - Proses</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">8. Dalam pembelajaran unplugged, peserta didik...</p>
+            <label><input type="radio" name="q8" value="A" required /> A. Harus selalu menggunakan laptop atau tablet</label>
+            <label><input type="radio" name="q8" value="B" /> B. Belajar konsep komputasional tanpa menggunakan perangkat digital</label>
+            <label><input type="radio" name="q8" value="C" /> C. Menonton video pembelajaran di rumah</label>
+            <label><input type="radio" name="q8" value="D" /> D. Membuat koding menggunakan robot canggih</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">9. Tujuan dari prinsip abstraction dalam berpikir komputasional adalah...</p>
+            <label><input type="radio" name="q9" value="A" required /> A. Mengulang langkah secara terus-menerus</label>
+            <label><input type="radio" name="q9" value="B" /> B. Mengambil informasi penting dan mengabaikan yang tidak relevan</label>
+            <label><input type="radio" name="q9" value="C" /> C. Membagi masalah ke dalam langkah-langkah kecil</label>
+            <label><input type="radio" name="q9" value="D" /> D. Mengenali pola dalam permainan</label>
+          </div>
+
+          <div class="question-group">
+            <p class="q-text">10. Contoh logika percabangan (branching) yang tepat dalam kehidupan nyata adalah...</p>
+            <label><input type="radio" name="q10" value="A" required /> A. Menyapu lantai setiap hari</label>
+            <label><input type="radio" name="q10" value="B" /> B. Membaca buku setiap pagi</label>
+            <label><input type="radio" name="q10" value="C" /> C. Jika hujan, maka membawa payung; jika tidak hujan, maka tidak membawa payung</label>
+            <label><input type="radio" name="q10" value="D" /> D. Memasak dengan mengikuti resep urut dari awal hingga akhir</label>
+          </div>
+
+          <button type="submit" class="btn-submit-quiz" id="btnSubmitQuiz"><i class="fa-solid fa-paper-plane"></i> Kirim Jawaban & Simpan Nilai</button>
+        </form>
+
+        <div id="quizResult" class="quiz-result-msg"></div>
+      </section>
+    </main>
+
+    <script src="materi1.js"></script>
+  </body>
+</html>

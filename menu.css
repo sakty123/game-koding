@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body.menu-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("image/bg-menu.jpg") no-repeat center center/cover fixed;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Container Utama Glassmorphism */
+.menu-container {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 20px 50px rgba(0, 75, 150, 0.15);
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header & Navigasi Atas */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.logo-area h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0077c8;
+  letter-spacing: 0.5px;
+}
+
+.logo-area .subtitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #1a2f4c;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1a2f4c;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link:hover,
+.nav-item.dropdown:hover > .nav-link {
+  background: rgba(255, 255, 255, 0.8);
+  color: #0077c8;
+}
+
+.icon-submenu {
+  font-size: 10px;
+  margin-left: 3px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown:hover .icon-submenu {
+  transform: rotate(180deg);
+}
+
+/* Submenu Dropdown */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  min-width: 250px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-item.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #1a2f4c;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.submenu li a:hover {
+  background: #f0f7ff;
+  color: #0077c8;
+  transform: translateX(4px);
+}
+
+.submenu li a i {
+  font-size: 14px;
+  color: #ff7300;
+  width: 20px;
+  text-align: center;
+}
+
+/* Status Terkunci pada Dropdown */
+.submenu li a.nav-locked {
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submenu li a.nav-locked i {
+  color: #94a3b8 !important;
+}
+
+.submenu li a.nav-locked:hover {
+  background: transparent !important;
+  transform: none !important;
+}
+
+/* Tombol Logout */
+.logout-link {
+  color: #d90429 !important;
+  border: 1.5px solid transparent;
+}
+
+.logout-link:hover {
+  background: rgba(217, 4, 41, 0.1) !important;
+  border-color: #d90429;
+}
+
+/* Informasi Siswa */
+.student-info {
+  margin-bottom: 30px;
+  color: #1a2f4c;
+  text-align: left;
+}
+
+.student-info h2 {
+  font-weight: 800;
+  color: #ff7300;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.student-info p {
+  font-size: 13px;
+  color: #475569;
+}
+
+/* Grid Kartu Modul */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* Desain Kartu Modul */
+.module-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+}
+
+.module-card:not(.locked):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 102, 204, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.module-icon {
+  font-size: 42px;
+  color: #ff7300;
+  margin-bottom: 12px;
+}
+
+.module-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0077c8;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.module-card p {
+  font-size: 11.5px;
+  color: #546e7a;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Indikator Skor */
+.score-display {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-label {
+  font-weight: 600;
+  color: #475569;
+}
+
+.score-value {
+  font-weight: 800;
+  color: #ff7300;
+}
+
+/* Tombol Mulai Belajar (Aktif) */
+.btn-module {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(180deg, #ff9436 0%, #ff5e00 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 94, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-module:hover {
+  background: linear-gradient(180deg, #ffa34d 0%, #ff6c14 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 94, 0, 0.4);
+}
+
+/* --- Status Kartu Terkunci (Locked) --- */
+.module-card.locked {
+  background: rgba(241, 245, 249, 0.55);
+  border-color: rgba(203, 213, 225, 0.6);
+  box-shadow: none;
+}
+
+.module-card.locked .module-icon {
+  color: #94a3b8;
+}
+
+.module-card.locked h3 {
+  color: #64748b;
+}
+
+.module-card.locked .score-value {
+  color: #94a3b8;
+}
+
+/* Tombol pada Kartu Terkunci */
+.module-card.locked .btn-module {
+  background: #cbd5e1 !important;
+  color: #64748b !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important; /* Mencegah klik tombol */
+  transform: none !important;
+}
+
+/* Ikon Gembok Overlay Transparan di Tengah Kartu */
+.module-card.locked::before {
+  content: "\f023";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 56px;
+  color: rgba(148, 163, 184, 0.35);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+  .main-nav ul {
+    gap: 6px;
+  }
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 25px 20px;
+  }
+  .menu-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+  .submenu {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+  .student-info h2 {
+    font-size: 22px;
+  }
+}

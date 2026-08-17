@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("image/bg_login.jpg") no-repeat center center/cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Atas */
+.top-header {
+  width: 100%;
+  background: rgba(16, 42, 77, 0.95);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Container Utama */
+.main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Kartu Login Glassmorphism */
+.login-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 28px;
+  padding: 35px 30px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow:
+    0 20px 40px rgba(0, 102, 204, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  text-align: center;
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Judul Kartu */
+.title-primary {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0077c8;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.title-secondary {
+  font-size: 30px;
+  font-weight: 900;
+  color: #ff7300;
+  line-height: 1.1;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-size: 10px;
+  font-weight: 800;
+  color: #1a2f4c;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* Form Fields */
+.form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a2f4c;
+  margin-bottom: 6px;
+  margin-left: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i.prefix-icon {
+  position: absolute;
+  left: 14px;
+  color: #7a92a5;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 40px 12px 38px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-size: 14px;
+  color: #1a2f4c;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.input-wrapper input:focus + i.prefix-icon {
+  color: #0077c8;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  color: #7a92a5;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: #1a2f4c;
+}
+
+/* Tombol Masuk */
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background: linear-gradient(180deg, #ff9436 0%, #ff5e00 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 6px 16px rgba(255, 94, 0, 0.35),
+    0 2px 0 #cc4b00 inset;
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 94, 0, 0.45);
+  background: linear-gradient(180deg, #ffa34d 0%, #ff6c14 100%);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(255, 94, 0, 0.3);
+}
+
+/* Pesan Respon */
+.alert-msg {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  display: none;
+}
+
+.alert-msg.error {
+  color: #d90429;
+  display: block;
+}
+
+.alert-msg.success {
+  color: #008000;
+  display: block;
+}

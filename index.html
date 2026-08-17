@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akademi Koding - Masuk</title>
+
+    <!-- Font Poppins & Font Awesome untuk Ikon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Hubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Baris Judul Atas -->
+    <header class="top-header">Akademi Koding: Jejak Kecerdasan Buatan</header>
+
+    <main class="main-container">
+      <!-- Kotak Form Login -->
+      <div class="login-card">
+        <div class="title-primary">AKADEMI</div>
+        <div class="title-secondary">KODING</div>
+        <div class="subtitle">Jejak Kecerdasan Buatan</div>
+
+        <form id="loginForm">
+          <!-- Input Username -->
+          <div class="form-group">
+            <label for="username">Nama Pengguna</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user prefix-icon"></i>
+              <input type="text" id="username" placeholder="Masukkan username" required autocomplete="username" />
+            </div>
+          </div>
+
+          <!-- Input Password -->
+          <div class="form-group">
+            <label for="password">Kata Sandi</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock prefix-icon"></i>
+              <input type="password" id="password" placeholder="Masukkan kata sandi" required autocomplete="current-password" />
+              <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <button type="submit" class="btn-submit">Masuk & Belajar</button>
+
+          <div id="alertMsg" class="alert-msg"></div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Hubungkan ke file JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
