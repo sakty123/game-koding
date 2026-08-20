@@ -1,127 +1,57 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akademi Koding - Menu Utama</title>
+<main class="map-container">
+  <div class="map-header">
+    <h2>🗺️ Peta Petualangan AI</h2>
+    <p>Selesaikan misi secara berurutan untuk menaklukkan dunia digital!</p>
+  </div>
 
-    <!-- Font Poppins & Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <link rel="stylesheet" href="menu.css" />
-  </head>
-  <body class="menu-page">
-    <!-- Container Utama -->
-    <main class="menu-container">
-      <header class="menu-header">
-        <div class="logo-area">
-          <h1>AKADEMI KODING</h1>
-          <p class="subtitle">Jejak Kecerdasan Buatan</p>
-        </div>
-
-        <!-- Navigasi Utama (Menu Atas) -->
-        <nav class="main-nav">
-          <ul>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link">Modul <i class="fa-solid fa-chevron-down icon-submenu"></i></a>
-              <!-- Submenu Dropdown -->
-              <ul class="submenu">
-                <li>
-                  <a href="materi1.html" id="navMateri1"> <i class="fa-solid fa-brain"></i> 1. Berpikir Komputasional </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" id="navMateri2" class="nav-locked"> <i class="fa-solid fa-robot"></i> 2. Konsep Dasar KA </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" id="navMateri3" class="nav-locked"> <i class="fa-solid fa-scale-balanced"></i> 3. Etika & Literasi KA </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" id="navMateri4" class="nav-locked"> <i class="fa-solid fa-network-wired"></i> 4. Pemanfaatan & Pengembangan KA </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Laboratorium <i class="fa-solid fa-flask icon-nav"></i></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Nilai <i class="fa-solid fa-chart-simple icon-nav"></i></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link logout-link" id="btnLogout">Keluar <i class="fa-solid fa-right-from-bracket icon-nav"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <!-- Informasi Profil Siswa -->
-      <div class="student-info">
-        <h2>Selamat Datang, <span id="studentName">Siswa</span>!</h2>
-        <p>Ayo lanjutkan petualangan belajarmu. Selesaikan materi secara berurutan untuk membuka modul berikutnya.</p>
+  <!-- GRID MISI (2x2) -->
+  <div class="mission-grid">
+    <!-- MISI 1 -->
+    <div class="mission-stop" id="cardMateri1">
+      <div class="mission-marker" id="marker1"><i class="fa-solid fa-brain"></i></div>
+      <div class="mission-card">
+        <img src="image/misi1.jpg" alt="Misi 1" class="mission-img" onerror="this.src = 'https://via.placeholder.com/400x200?text=Misi+1'" />
+        <div class="mission-title">MISI 1: Berpikir Komputasional</div>
+        <p>Memecahkan masalah dengan 4 pilar logika & algoritma.</p>
+        <div class="score-board">Skor: <span class="score-value" id="score1">0/100</span></div>
+        <a href="materi1.html" class="btn-play" id="btnMateri1">MULAI MISI <i class="fa-solid fa-play"></i></a>
       </div>
+    </div>
 
-      <!-- Grid Kartu Modul (Menu Bawah) -->
-      <div class="module-grid">
-        <!-- Kartu 1: Berpikir Komputasional (Terbuka Default) -->
-        <div class="module-card" id="cardMateri1">
-          <div class="module-content">
-            <i class="fa-solid fa-brain module-icon"></i>
-            <h3>Materi 1: Berpikir Komputasional</h3>
-            <p>Memahami 4 pilar logika, konsep IPO, variabel, dan struktur algoritma.</p>
-            <div class="score-display">
-              <span class="score-label">Nilai:</span>
-              <span class="score-value" id="score1">Belum Dinilai</span>
-            </div>
-            <a href="materi1.html" class="btn-module" id="btnMateri1">Mulai Belajar</a>
-          </div>
-        </div>
-
-        <!-- Kartu 2: Konsep Dasar KA (Terkunci Default) -->
-        <div class="module-card locked" id="cardMateri2">
-          <div class="module-content">
-            <i class="fa-solid fa-robot module-icon"></i>
-            <h3>Materi 2: Konsep Dasar KA</h3>
-            <p>Karakteristik mesin cerdas vs noncerdas, macam teknologi, dan cara kerja KA.</p>
-            <div class="score-display">
-              <span class="score-label">Nilai:</span>
-              <span class="score-value" id="score2">Terkunci</span>
-            </div>
-            <a href="javascript:void(0)" class="btn-module" id="btnMateri2">Materi Terkunci</a>
-          </div>
-        </div>
-
-        <!-- Kartu 3: Etika & Literasi KA (Terkunci Default) -->
-        <div class="module-card locked" id="cardMateri3">
-          <div class="module-content">
-            <i class="fa-solid fa-scale-balanced module-icon"></i>
-            <h3>Materi 3: Etika & Literasi KA</h3>
-            <p>Prinsip transparansi, akuntabilitas, keadilan data, dan perlindungan privasi.</p>
-            <div class="score-display">
-              <span class="score-label">Nilai:</span>
-              <span class="score-value" id="score3">Terkunci</span>
-            </div>
-            <a href="javascript:void(0)" class="btn-module" id="btnMateri3">Materi Terkunci</a>
-          </div>
-        </div>
-
-        <!-- Kartu 4: Pemanfaatan & Pengembangan KA (Terkunci Default) -->
-        <div class="module-card locked" id="cardMateri4">
-          <div class="module-content">
-            <i class="fa-solid fa-network-wired module-icon"></i>
-            <h3>Materi 4: Pemanfaatan & Pengembangan KA</h3>
-            <p>Peran pengembang vs pengguna, tantangan era digital, dan panduan aman anak.</p>
-            <div class="score-display">
-              <span class="score-label">Nilai:</span>
-              <span class="score-value" id="score4">Terkunci</span>
-            </div>
-            <a href="javascript:void(0)" class="btn-module" id="btnMateri4">Materi Terkunci</a>
-          </div>
-        </div>
+    <!-- MISI 2 -->
+    <div class="mission-stop locked" id="cardMateri2">
+      <div class="mission-marker" id="marker2"><i class="fa-solid fa-lock"></i></div>
+      <div class="mission-card">
+        <img src="image/misi2.jpg" alt="Misi 2" class="mission-img" onerror="this.src = 'https://via.placeholder.com/400x200?text=Misi+2'" />
+        <div class="mission-title">MISI 2: Konsep Dasar KA</div>
+        <p>Mengenal mesin cerdas, cara kerja, & batasannya.</p>
+        <div class="score-board">Skor: <span class="score-value" id="score2">Terkunci</span></div>
+        <a href="javascript:void(0)" class="btn-play" id="btnMateri2">TERKUNCI <i class="fa-solid fa-lock"></i></a>
       </div>
-    </main>
+    </div>
 
-    <script src="menu.js"></script>
-  </body>
-</html>
+    <!-- MISI 3 -->
+    <div class="mission-stop locked" id="cardMateri3">
+      <div class="mission-marker" id="marker3"><i class="fa-solid fa-lock"></i></div>
+      <div class="mission-card">
+        <img src="image/misi3.jpg" alt="Misi 3" class="mission-img" onerror="this.src = 'https://via.placeholder.com/400x200?text=Misi+3'" />
+        <div class="mission-title">MISI 3: Etika & Literasi KA</div>
+        <p>Etika, privasi, keamanan data, & keadilan algoritma.</p>
+        <div class="score-board">Skor: <span class="score-value" id="score3">Terkunci</span></div>
+        <a href="javascript:void(0)" class="btn-play" id="btnMateri3">TERKUNCI <i class="fa-solid fa-lock"></i></a>
+      </div>
+    </div>
+
+    <!-- MISI 4 -->
+    <div class="mission-stop locked" id="cardMateri4">
+      <div class="mission-marker" id="marker4"><i class="fa-solid fa-lock"></i></div>
+      <div class="mission-card">
+        <img src="image/misi4.jpg" alt="Misi 4" class="mission-img" onerror="this.src = 'https://via.placeholder.com/400x200?text=Misi+4'" />
+        <div class="mission-title">MISI 4: Pemanfaatan KA</div>
+        <p>Praktik aman menggunakan KA dan berkreasi.</p>
+        <div class="score-board">Skor: <span class="score-value" id="score4">Terkunci</span></div>
+        <a href="javascript:void(0)" class="btn-play" id="btnMateri4">TERKUNCI <i class="fa-solid fa-lock"></i></a>
+      </div>
+    </div>
+  </div>
+</main>
